@@ -1,10 +1,10 @@
+import 'package:elearning/app/data/constant.dart';
+import 'package:elearning/app/modules/Authentication/views/signin_page_view.dart';
+import 'package:elearning/app/modules/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:learning/app/data/constant.dart';
-import 'package:learning/app/modules/Authentication/views/signin_page_view.dart';
-import 'package:learning/app/modules/Authentication/views/signup_page_view.dart';
-import 'package:learning/app/modules/home/views/home_view.dart';
+
 
 import '../controllers/authentication_controller.dart';
 

@@ -1,22 +1,30 @@
+import 'package:elearning/app/modules/Authentication/views/signin_page_view.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learning/app/data/constant.dart';
-import 'package:learning/app/data/customButton.dart';
-import 'package:learning/app/data/customTextFormField.dart';
-import 'package:learning/app/modules/Authentication/controllers/authentication_controller.dart';
-import 'package:learning/app/modules/Authentication/views/signin_page_view.dart';
+import 'package:elearning/app/data/constant.dart';
+import 'package:elearning/app/data/customButton.dart';
+import 'package:elearning/app/data/customTextFormField.dart';
+import 'package:elearning/app/modules/Authentication/controllers/authentication_controller.dart';
+import 'package:elearning/app/modules/Authentication/views/signup_page_view.dart';
 
 class SignupPageView extends GetView {
-  const SignupPageView({Key? key}) : super(key: key);
+  SignupPageView({Key? key}) : super(key: key);
+
+  AuthenticationController authCtrl = Get.put(AuthenticationController());
+  ConstantColors concolor = ConstantColors();
+
+  TextEditingController email = TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController phoneNumber = TextEditingController();
+  TextEditingController idNumber = TextEditingController();
+  TextEditingController username = TextEditingController();
+  TextEditingController password = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    AuthenticationController authCtrl = Get.find<AuthenticationController>();
-    ConstantColors concolor = ConstantColors();
-
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(18.0),
@@ -33,7 +41,7 @@ class SignupPageView extends GetView {
               // ),
               CustomTextFieldForm(
                 isobscre: false.obs,
-                controller: authCtrl.name,
+                controller: name,
                 icon: EvaIcons.person,
                 hintText: "Name",
               ),
@@ -42,7 +50,7 @@ class SignupPageView extends GetView {
               ),
               CustomTextFieldForm(
                 isobscre: false.obs,
-                controller: authCtrl.email,
+                controller: email,
                 icon: EvaIcons.emailOutline,
                 hintText: "Mail",
               ),
@@ -51,7 +59,7 @@ class SignupPageView extends GetView {
               ),
               CustomTextFieldForm(
                 isobscre: false.obs,
-                controller: authCtrl.phoneNumber,
+                controller: phoneNumber,
                 icon: EvaIcons.phone,
                 hintText: "phone Number",
               ),
@@ -60,7 +68,7 @@ class SignupPageView extends GetView {
               ),
               CustomTextFieldForm(
                 isobscre: false.obs,
-                controller: authCtrl.idNumber,
+                controller: idNumber,
                 icon: Icons.assignment_ind_outlined,
                 hintText: "Student Id",
               ),
@@ -69,7 +77,7 @@ class SignupPageView extends GetView {
               ),
               CustomTextFieldForm(
                 isobscre: true.obs,
-                controller: authCtrl.password,
+                controller: password,
                 icon: EvaIcons.lockOutline,
                 hintText: "password",
               ),
@@ -77,8 +85,9 @@ class SignupPageView extends GetView {
                 height: Get.height * 0.04,
               ),
               GestureDetector(
-                onTap: ()  {
-                   authCtrl.signup();
+                onTap: () {
+                  print("The email: ${email.text}");
+                  authCtrl.Signup(email.text, password.text, name.text, idNumber.text, phoneNumber.text,);
                 },
                 child: customButton(
                   color: concolor.primarycolor as Color,

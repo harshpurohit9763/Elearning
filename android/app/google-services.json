@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "983682898851",
+    "project_id": "learning-2ebd1",
+    "storage_bucket": "learning-2ebd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983682898851:android:875864d05ae1148060d816",
+        "android_client_info": {
+          "package_name": "com.example.elearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983682898851-hrnd3k94mmeerg7ipdt53p3kr2q8l40u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elearning",
+            "certificate_hash": "fb2a0aac43250f0071f492a8b87ef9f0d32ade7c"
+          }
+        },
+        {
+          "client_id": "983682898851-cg01n62ius8u8spr70m9one6hlcr1kdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB__XdWuXp1IBzgTUWqsQ6ZiE9SfU-vBVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983682898851-cg01n62ius8u8spr70m9one6hlcr1kdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

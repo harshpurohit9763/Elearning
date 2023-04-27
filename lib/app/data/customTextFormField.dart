@@ -1,8 +1,8 @@
+import 'package:elearning/app/data/constant.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:learning/app/data/constant.dart';
 
 class CustomTextFieldForm extends StatelessWidget {
   CustomTextFieldForm({
@@ -21,9 +21,7 @@ class CustomTextFieldForm extends StatelessWidget {
     ConstantColors concolor = ConstantColors();
 
     return TextFormField(
-      onChanged: (value) {
-        controller.value == value;
-      },
+      controller: controller,
       obscureText: isobscre.value,
       decoration: InputDecoration(
         icon: Icon(

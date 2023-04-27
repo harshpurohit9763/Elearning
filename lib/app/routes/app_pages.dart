@@ -1,5 +1,5 @@
+import 'package:elearning/app/modules/Authentication/views/signin_page_view.dart';
 import 'package:get/get.dart';
-import 'package:learning/app/modules/Authentication/views/signin_page_view.dart';
 
 import '../modules/Authentication/bindings/authentication_binding.dart';
 import '../modules/Authentication/views/authentication_view.dart';
@@ -16,7 +16,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const HomeView(),
+      page: () =>  HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(

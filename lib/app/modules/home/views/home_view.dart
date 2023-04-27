@@ -1,3 +1,4 @@
+import 'package:elearning/app/modules/Authentication/controllers/authentication_controller.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -5,18 +6,22 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+  AuthenticationController authCtrl = Get.find<AuthenticationController>();
+  HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+     
+      body: Center(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Container(
+                child: Text("Hi"),
+              )
+            ],
+          ),
         ),
       ),
     );
